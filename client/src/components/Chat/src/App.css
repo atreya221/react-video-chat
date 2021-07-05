@@ -1,0 +1,114 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  text-align: left;
+}
+
+.App-header {
+  margin-top: 35px;
+  margin-left: 15px;
+  margin-right: -10px;
+  background-color: #262626;
+  overflow: visible;
+  height: 50px;
+  padding-top: 10px;
+  text-align: center;
+  color: rgb(228, 133, 133);
+}
+
+.Messages-list {
+  padding: 0;
+  overflow: auto;
+  max-height: 100%;
+  max-width: 400px;
+  width: 108%;
+  margin: 10px auto;
+  list-style: none;
+  padding-left: 0;
+  flex-grow: 1;
+}
+
+.Messages-message {
+  display: flex;
+  margin-top: 10px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.Messages-message.currentMember {
+  /*justify-content: flex-end;*/
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.Message-content {
+  display: inline-block;
+}
+
+.currentMember > .Message-content {
+  align-items: flex-end;
+}
+
+.Messages-message > .avatar {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 10px -10px;
+}
+
+.Message-content > .username {
+  display: block;
+  color: gray;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+
+.Message-content > .text {
+  padding: 10px;
+  max-width: 250px;
+  margin: 0;
+  border-radius: 12px;
+  background-color: cornflowerblue;
+  color: white;
+  display: inline-block;
+}
+
+.currentMember > .Message-content .text {
+  background-color: orangered;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 330px;
+  margin: 5px 15px;
+  overflow: visible;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+input {
+  margin-right: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  font-size: 20px;
+  border-radius: 8px;
+  border: 1px solid rgb(22, 30, 70);
+  flex-grow: 1;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+button {
+  border-radius: 20px;
+  padding-right: 0;
+  font-size: 20px;
+  background-color: '#212121';
+  color: white;
+  border: none;
+  border-radius: 8px;
+}

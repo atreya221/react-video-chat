@@ -1,5 +1,5 @@
 {
-  "name": "ms-teams-clone",
+  "name": "ms_teams_clone",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atreya221/ms-teams-clone.git"
+    "url": "git+https://github.com/lipijain2/ms_teams_clone.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/atreya221/ms-teams-clone/issues"
+    "url": "https://github.com/lipijain2/ms_teams_clone/issues"
   },
-  "homepage": "https://github.com/atreya221/ms-teams-clone#readme",
+  "homepage": "https://github.com/lipijain2/ms_teams_clone#readme",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
@@ -26,9 +26,15 @@
     "react-copy-to-clipboard": "^5.0.3",
     "simple-peer": "^9.11.0",
     "socket.io": "^4.1.2",
-    "socket.io-client": "^4.1.2"
+    "socket.io-client": "^4.1.2",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express-session": "^1.17.1",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
-    "@types/express": "^4.17.12"
+    "@types/react-dom": "^17.0.7",
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }
