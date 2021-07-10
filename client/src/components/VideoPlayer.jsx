@@ -40,9 +40,9 @@ const VideoPlayer = () => {
           <Paper className={classes.paper}>
               <Grid item>
                 <center>
-                  <Typography style={{ fontFamily: 'Courgette', textAlign: 'center', midWidth: '0'}} variant="h5" gutterBottom>{ name || 'Me' }</Typography>
+                  <Typography style={{ fontFamily: 'Volkhov', textAlign: 'center', midWidth: '0'}} variant="h5" gutterBottom>{ name || 'Me' }</Typography>
                 </center>
-                <video onContextMenu="return false;" controls playsInline muted ref={myVideo} autoPlay className={classes.video} />
+                <video onContextMenu="return false;" playsInline muted ref={myVideo} autoPlay className={classes.video} />
               </Grid>
           </Paper>
         )
@@ -52,9 +52,9 @@ const VideoPlayer = () => {
           <Paper className={classes.paper}>
               <Grid item>
                 <center>
-                  <Typography style={{ fontFamily: 'Courgette' }} variant="h5" gutterBottom>{ call.name || call.to || 'Unknown' }</Typography>
+                  <Typography style={{ fontFamily: 'Volkhov' }} variant="h5" gutterBottom>{ call.name || call.to || 'Unknown' }</Typography>
                 </center>  
-                <video onContextMenu="return false;" controls playsInline ref={userVideo} autoPlay className={classes.video} />
+                <video onContextMenu="return false;" playsInline ref={userVideo} autoPlay className={classes.video} />
               </Grid>
           </Paper>
          )
@@ -64,9 +64,9 @@ const VideoPlayer = () => {
           <Paper className={classes.paper}>
               <Grid item>
                 <center>
-                  <Typography style={{ fontFamily: 'Courgette', textAlign: 'center', midWidth: '0'}} variant="h5" gutterBottom>{ name + 's Screen' }</Typography>
+                  <Typography style={{ fontFamily: 'Volkhov', textAlign: 'center', midWidth: '0'}} variant="h5" gutterBottom>{ name + 's Screen' }</Typography>
                 </center>
-                <video onContextMenu="return false;" controls playsInline muted ref={myMedia} autoPlay className={classes.video} />
+                <video onContextMenu="return false;" playsInline muted ref={myMedia} autoPlay className={classes.video} />
               </Grid>
           </Paper>
         )
@@ -76,7 +76,7 @@ const VideoPlayer = () => {
           <Paper className={classes.paper}>
               <Grid item>
                 <center>
-                  <Typography style={{ fontFamily: 'Courgette', textAlign: 'center', midWidth: '0'}} variant="h5" gutterBottom>{ (call.name|| 'Unknown') + 's Screen' }</Typography>
+                  <Typography style={{ fontFamily: 'Volkhov', textAlign: 'center', midWidth: '0'}} variant="h5" gutterBottom>{ (call.name|| 'Unknown') + 's Screen' }</Typography>
                 </center>
                 <video onContextMenu="return false;" controls playsInline muted ref={userMedia} autoPlay className={classes.video} />
               </Grid>

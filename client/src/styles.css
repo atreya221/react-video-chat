@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Akaya+Kanadaka');
+@import url('https://fonts.googleapis.com/css?family=Volkhov');
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(http://www.baltana.com/files/wallpapers-2/Dark-Background-04536.jpg);
-    /*url(https://wallpaper-house.com/wallpaper-id-237195.php);*/
+    /*url(image.jpeg);*/
+    url(https://image.freepik.com/free-vector/black-wallpaper-with-motion-lines-background_1017-30151.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -36,7 +39,6 @@ video {
 
 .btn {
   text-align: center;
-  /*position: relative;*/
   display: inline-block;
 }
 

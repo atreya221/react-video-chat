@@ -71,13 +71,14 @@
   max-width: 250px;
   margin: 0;
   border-radius: 12px;
-  background-color: cornflowerblue;
+  background-color: rgb(49, 158, 221);
   color: white;
   display: inline-block;
+  font-family: 'Varela Round';
 }
 
 .currentMember > .Message-content .text {
-  background-color: orangered;
+  background-color: rgb(219, 85, 85);
 }
 
 form {
@@ -108,7 +109,7 @@ button {
   padding-right: 0;
   font-size: 20px;
   background-color: '#212121';
-  color: white;
+  color: rgb(219, 85, 85);
   border: none;
   border-radius: 8px;
 }

@@ -2,18 +2,33 @@ import React, { useContext, useState } from 'react';
 import Pop from './Pop';
 import ChatPop from './ChatPop';
 import { Button } from '@material-ui/core';
-import { Mic, Videocam, MicOff, VideocamOff, PhoneDisabled, ScreenShare, StopScreenShare } from '@material-ui/icons';
-
+import { Mic, Videocam, MicOff, VideocamOff, PhoneDisabled, ScreenShare, StopScreenShare, ExitToApp } from '@material-ui/icons';
 import { SocketContext } from '../SocketContext';
 
 const ButtonBar = () => {
-  const { call, callAccepted, callEnded, leaveCall, switchVideoOn, switchVideoOff, switchMicOn, switchMicOff, shareScreenOn, shareScreenOff  } = useContext(SocketContext);
+  const { logout,callAccepted, callEnded, leaveCall, switchVideoOn, switchVideoOff, switchMicOn, switchMicOff, shareScreenOn, shareScreenOff  } = useContext(SocketContext);
   const [isMicOn, setIsMicOn] = useState(true);
   const [isVideoOn, setIsVideoOn] = useState(true);
   const [isScreenOn, setIsScreenOn] = useState(false);
     
   return (
     <div className="footer">
+      <Button 
+        style={{ 
+          margintop: '5px', 
+          paddingLeft : '18px', 
+          minWidth: '30px', 
+          width: '50px', 
+          height: '50px', 
+          marginLeft: '20px', 
+          backgroundColor: '#000000', 
+          color: '#FFFFFF', 
+          borderRadius: '50px',
+          float: 'left'
+        }} 
+        startIcon={<ExitToApp style={{fontSize:30}}/>} 
+        onClick={() => {logout();}}>
+      </Button>
       <span style={{ display: 'absolute', marginLeft:'10%'}}>
         {isMicOn ?(
             <Button 

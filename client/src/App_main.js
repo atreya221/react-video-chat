@@ -7,7 +7,7 @@ import Registration from "./Registration";
 function AppMain() {
   return (
     <Router>
-      <Route path="/registration" exact render={(props) => <Registration />} />
+      <Route path="/" exact render={(props) => <Registration />} />
       <Route path="/app">
         <App />
       </Route>

@@ -43,17 +43,21 @@ const Options = ( { children } ) => {
   const [idToCall, setIdToCall] = useState('');
   const classes = useStyles();
   const name = window.localStorage.getItem("name");
+  function playRing() {
+    const audioEl = document.getElementsByClassName("audio-element-ring")[0];
+    audioEl.play();
+  }
 
   return (
     <Container className={classes.container}>
       <Paper elevation={10} className={classes.paper}>
       <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography style= {{ fontFamily: 'Courgette', backgroundColor: '#212121', color: '#FFFFFF'}} variant="h3" align="center">ChatMate</Typography>
+        <Typography style= {{ fontFamily: 'Courgette', backgroundColor: '#212121', color: '#FFFFFF'}} variant="h3" align="center">Welcome!</Typography>
       </AppBar>
         <form className={classes.root} noValidate autoComplete="off">
           <Grid container className={classes.gridContainer}>
             <Grid item className={classes.padding}>
-              <Typography style= {{ display: "inline-block", padding: "10px", backgroundColor: '#FFFFFF', color: '#000000'}} gutterBottom variant="h6">Welcome {name}</Typography>
+              <Typography style= {{ display: "inline-block", padding: "10px", fontFamily: 'Courgette', backgroundColor: '#212121', color: '#FFFFFF'}} gutterBottom variant="h4">{name}</Typography>
               <CopyToClipboard text={me} className={classes.margin}>
                 <Button variant="contained" color="primary" fullWidth startIcon={<Assignment />}>
                   Copy your username
@@ -62,16 +66,21 @@ const Options = ( { children } ) => {
             </Grid>
 
             <Grid item className={classes.padding}>
-              <Typography style= {{ display: "inline-block", padding: "10px", backgroundColor: '#212121', color: '#FFFFFF'}} gutterBottom variant="h6">Make a Call</Typography>
+              <Typography style= {{ display: "inline-block", fontFamily:"Varela Round", padding: "10px", backgroundColor: '#212121', color: '#FFFFFF'}} gutterBottom variant="h5">Make a Call</Typography>
               <TextField label="user to call" value={idToCall} onChange={(e) => setIdToCall(e.target.value)} fullWidth />
               {!callEnded && callAccepted ? (
                 <Button variant="contained" style={{backgroundColor: '#388e3c', color: '#FFFFFF'}}  fullWidth className={classes.margin}>
                   Connected
                 </Button>
               ) : (
-                <Button  variant="contained" style={{backgroundColor: '#388e3c', color: '#FFFFFF'}} startIcon={<Phone fontSize="large" />} fullWidth onClick={() => callUser(idToCall)} className={classes.margin}>
+                <>
+                <audio className="audio-element-ring">
+                  <source src="https://ring.techbigs.download/files/new-bollywood-instrumental.mp3"></source>
+                </audio>
+                <Button  variant="contained" style={{backgroundColor: '#388e3c', color: '#FFFFFF'}} startIcon={<Phone fontSize="large" />} fullWidth onClick={() => {callUser(idToCall); playRing();}} className={classes.margin}>
                   Call
                 </Button>
+                </>
               )}
             </Grid>
           </Grid>

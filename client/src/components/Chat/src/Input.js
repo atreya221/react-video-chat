@@ -30,7 +30,7 @@ class Input extends Component {
             autofocus="true"
           />
           <button>
-            <Button style={{ minWidth: '35px', backgroundColor: '#212121', width: '50px', color: '#FFFFFF', paddingRight: '0'}} startIcon={<Send />}></Button>
+            <Button style={{ minWidth: '35px', backgroundColor: '#212121', width: '50px', height: '40px', color: '#FFFFFF', paddingRight: '0'}} startIcon={<Send />}></Button>
           </button>
         </form>
       </div>
